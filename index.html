@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yıldız Berber | Modern Berber Salonu</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+/* MENÜ */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(20,20,20,0.97);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* ANA BÖLÜM */
+.hero {
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        radial-gradient(circle at top, #3a3220, #111 65%);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.gold {
+    color: #d4af37;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 32px;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background: #f0c94d;
+}
+
+/* GENEL */
+section {
+    padding: 80px 10%;
+}
+
+.title {
+    text-align: center;
+    color: #d4af37;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 45px;
+}
+
+/* HİZMETLER */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+    background: #1d1d1d;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.card p {
+    color: #bbb;
+    line-height: 1.5;
+}
+
+/* FİYATLAR */
+.prices {
+    background: #191919;
+}
+
+.price-list {
+    max-width: 700px;
+    margin: auto;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #333;
+    font-size: 18px;
+}
+
+.price {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* GALERİ */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 280px;
+    height: 180px;
+    background: linear-gradient(135deg, #292929, #151515);
+    border: 1px solid #444;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    font-size: 18px;
+}
+
+/* İLETİŞİM */
+.contact {
+    background: #191919;
+    text-align: center;
+}
+
+.contact p {
+    color: #ccc;
+    margin: 15px;
+    font-size: 18px;
+}
+
+.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #080808;
+    color: #777;
+}
+
+/* TELEFON */
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .price-item {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✂ YILDIZ BERBER</div>
+
+    <nav>
+        <a href="#anasayfa">Ana Sayfa</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#fiyatlar">Fiyatlar</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+</header>
+
+<section class="hero" id="anasayfa">
+    <div class="hero-content">
+        <h1>Tarzın <span class="gold">Senin İmzan</span></h1>
+
+        <p>
+            Modern saç kesimi, profesyonel sakal bakımı ve
+            sana özel bir tarz için Yıldız Berber'e bekliyoruz.
+        </p>
+
+        <a href="#iletisim" class="button">Randevu Al</a>
+    </div>
+</section>
+
+<section id="hizmetler">
+
+    <h2 class="title">Hizmetlerimiz</h2>
+    <p class="subtitle">Profesyonel bakım ve modern tarz.</p>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>✂ Saç Kesimi</h3>
+            <p>Yüz şekline ve tarzına uygun modern saç kesimi.</p>
+        </div>
+
+        <div class="card">
+            <h3>🧔 Sakal Bakımı</h3>
+            <p>Profesyonel sakal kesimi ve şekillendirme.</p>
+        </div>
+
+        <div class="card">
+            <h3>💈 Saç + Sakal</h3>
+            <p>Komple bakım ile yeni ve modern bir görünüm.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="prices" id="fiyatlar">
+
+    <h2 class="title">Fiyatlarımız</h2>
+    <p class="subtitle">Örnek fiyat listesi</p>
+
+    <div class="price-list">
+
+        <div class="price-item">
+            <span>Saç Kesimi</span>
+            <span class="price">250 TL</span>
+        </div>
+
+        <div class="price-item">
+            <span>Sakal Kesimi</span>
+            <span class="price">150 TL</span>
+        </div>
+
+        <div class="price-item">
+            <span>Saç + Sakal</span>
+            <span class="price">350 TL</span>
+        </div>
+
+        <div class="price-item">
+            <span>Çocuk Saç Kesimi</span>
+            <span class="price">200 TL</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="galeri">
+
+    <h2 class="title">Galerimiz</h2>
+    <p class="subtitle">Yaptığımız çalışmalardan örnekler</p>
+
+    <div class="gallery">
+
+        <div class="gallery-item">📸 Fotoğraf 1</div>
+        <div class="gallery-item">📸 Fotoğraf 2</div>
+        <div class="gallery-item">📸 Fotoğraf 3</div>
+
+    </div>
+
+</section>
+
+<section class="contact" id="iletisim">
+
+    <h2 class="title">Bize Ulaşın</h2>
+
+    <p>📍 İstanbul, Türkiye</p>
+    <p>📞 0555 555 55 55</p>
+    <p>🕒 Her gün: 09:00 - 21:00</p>
+
+    <!-- BURAYA GERÇEK NUMARA EKLENECEK -->
+    <a class="button whatsapp"
+       href="https://wa.me/905555555555"
+       target="_blank">
+       WhatsApp'tan Randevu Al 🟢
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Yıldız Berber — Tüm hakları saklıdır.
+</footer>
+
+</body>
+</html>
