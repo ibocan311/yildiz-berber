@@ -4,248 +4,358 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Yıldız Berber | Modern Berber Salonu</title>
+<title>Yıldız Berber | Premium Erkek Kuaförü</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
+html{
+    scroll-behavior:smooth;
 }
 
-/* MENÜ */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(20,20,20,0.97);
-    padding: 18px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #333;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
+    color:white;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #d4af37;
+/* NAVBAR */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(10,10,10,.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #242424;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 22px;
-    transition: 0.3s;
+nav{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-nav a:hover {
-    color: #d4af37;
+.logo{
+    color:#d4af37;
+    font-size:24px;
+    font-weight:bold;
+    letter-spacing:1px;
 }
 
-/* ANA BÖLÜM */
-.hero {
-    min-height: 580px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px;
+.logo span{
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul a{
+    color:#ddd;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul a:hover{
+    color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px 50px;
     background:
-        radial-gradient(circle at top, #3a3220, #111 65%);
+    radial-gradient(circle at top, #2b2415 0%, #111 45%, #090909 100%);
 }
 
-.hero-content {
-    max-width: 800px;
+.hero-content{
+    max-width:850px;
 }
 
-.hero h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
+.badge{
+    display:inline-block;
+    padding:10px 18px;
+    border:1px solid #d4af37;
+    color:#d4af37;
+    border-radius:30px;
+    margin-bottom:25px;
+    font-size:14px;
 }
 
-.gold {
-    color: #d4af37;
+.hero h1{
+    font-size:clamp(45px,8vw,90px);
+    margin-bottom:20px;
+    line-height:1;
 }
 
-.hero p {
-    font-size: 20px;
-    color: #ccc;
-    line-height: 1.6;
+.gold{
+    color:#d4af37;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 16px 32px;
-    background: #d4af37;
-    color: #111;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: 0.3s;
+.hero p{
+    color:#bbb;
+    font-size:19px;
+    line-height:1.7;
+    max-width:650px;
+    margin:0 auto 35px;
 }
 
-.button:hover {
-    transform: scale(1.05);
-    background: #f0c94d;
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 30px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#d4af37;
+    color:#111;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    background:#f0ca4d;
+}
+
+.btn-secondary{
+    border:1px solid #555;
+    color:white;
+}
+
+.btn-secondary:hover{
+    border-color:#d4af37;
 }
 
 /* GENEL */
-section {
-    padding: 80px 10%;
+
+section{
+    padding:100px 25px;
 }
 
-.title {
-    text-align: center;
-    color: #d4af37;
-    font-size: 38px;
-    margin-bottom: 15px;
+.container{
+    max-width:1200px;
+    margin:auto;
 }
 
-.subtitle {
-    text-align: center;
-    color: #aaa;
-    margin-bottom: 45px;
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#999;
 }
 
 /* HİZMETLER */
-.services {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+
+.services{
+    background:#111;
 }
 
-.card {
-    width: 280px;
-    background: #1d1d1d;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #333;
-    transition: 0.3s;
-    text-align: center;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    border-color: #d4af37;
+.card{
+    background:#191919;
+    padding:35px 28px;
+    border:1px solid #292929;
+    border-radius:14px;
+    transition:.3s;
 }
 
-.card h3 {
-    margin: 15px 0;
-    font-size: 22px;
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#d4af37;
 }
 
-.card p {
-    color: #bbb;
-    line-height: 1.5;
+.icon{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#aaa;
+    line-height:1.6;
 }
 
 /* FİYATLAR */
-.prices {
-    background: #191919;
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.price-list {
-    max-width: 700px;
-    margin: auto;
+.price-card{
+    background:#151515;
+    border:1px solid #292929;
+    padding:35px;
+    border-radius:15px;
 }
 
-.price-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid #333;
-    font-size: 18px;
+.price-card.featured{
+    border:2px solid #d4af37;
+    transform:scale(1.03);
 }
 
-.price {
-    color: #d4af37;
-    font-weight: bold;
+.price-card h3{
+    font-size:25px;
+    margin-bottom:20px;
 }
 
-/* GALERİ */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.price{
+    color:#d4af37;
+    font-size:35px;
+    font-weight:bold;
+    margin-bottom:25px;
 }
 
-.gallery-item {
-    width: 280px;
-    height: 180px;
-    background: linear-gradient(135deg, #292929, #151515);
-    border: 1px solid #444;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #d4af37;
-    font-size: 18px;
+.price-card ul{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.price-card li{
+    padding:10px 0;
+    border-bottom:1px solid #242424;
+    color:#bbb;
+}
+
+/* HAKKIMIZDA */
+
+.about{
+    background:#111;
+}
+
+.about-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-visual{
+    min-height:350px;
+    border-radius:18px;
+    background:
+    linear-gradient(135deg, rgba(212,175,55,.25), transparent),
+    #1b1b1b;
+    border:1px solid #333;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:100px;
+}
+
+.about-text h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#aaa;
+    line-height:1.8;
+    margin-bottom:15px;
 }
 
 /* İLETİŞİM */
-.contact {
-    background: #191919;
-    text-align: center;
+
+.contact{
+    text-align:center;
 }
 
-.contact p {
-    color: #ccc;
-    margin: 15px;
-    font-size: 18px;
+.contact-box{
+    background:#161616;
+    max-width:800px;
+    margin:auto;
+    padding:50px 25px;
+    border-radius:18px;
+    border:1px solid #292929;
 }
 
-.whatsapp {
-    background: #25D366;
-    color: white;
+.contact-box h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    color:#aaa;
+    margin-bottom:30px;
 }
 
 /* FOOTER */
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #080808;
-    color: #777;
+
+footer{
+    border-top:1px solid #222;
+    text-align:center;
+    padding:30px;
+    color:#777;
 }
 
-/* TELEFON */
-@media (max-width: 700px) {
+/* MOBİL */
 
-    header {
-        flex-direction: column;
-        gap: 15px;
+@media(max-width:800px){
+
+    nav ul{
+        display:none;
     }
 
-    nav a {
-        margin: 0 8px;
-        font-size: 14px;
+    .cards,
+    .pricing-grid{
+        grid-template-columns:1fr;
     }
 
-    .hero h1 {
-        font-size: 40px;
+    .price-card.featured{
+        transform:none;
     }
 
-    .hero p {
-        font-size: 17px;
+    .about-box{
+        grid-template-columns:1fr;
     }
 
-    section {
-        padding: 60px 20px;
+    section{
+        padding:70px 20px;
     }
 
-    .price-item {
-        font-size: 16px;
-    }
 }
 </style>
 </head>
@@ -253,121 +363,186 @@ footer {
 <body>
 
 <header>
-    <div class="logo">✂ YILDIZ BERBER</div>
+<nav>
+<div class="logo">✂ YILDIZ <span>BERBER</span></div>
 
-    <nav>
-        <a href="#anasayfa">Ana Sayfa</a>
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#fiyatlar">Fiyatlar</a>
-        <a href="#galeri">Galeri</a>
-        <a href="#iletisim">İletişim</a>
-    </nav>
+<ul>
+<li><a href="#anasayfa">Ana Sayfa</a></li>
+<li><a href="#hizmetler">Hizmetler</a></li>
+<li><a href="#fiyatlar">Fiyatlar</a></li>
+<li><a href="#hakkimizda">Hakkımızda</a></li>
+<li><a href="#iletisim">İletişim</a></li>
+</ul>
+</nav>
 </header>
 
+<main>
+
 <section class="hero" id="anasayfa">
-    <div class="hero-content">
-        <h1>Tarzın <span class="gold">Senin İmzan</span></h1>
+<div class="hero-content">
 
-        <p>
-            Modern saç kesimi, profesyonel sakal bakımı ve
-            sana özel bir tarz için Yıldız Berber'e bekliyoruz.
-        </p>
+<div class="badge">★ PREMIUM BERBER DENEYİMİ</div>
 
-        <a href="#iletisim" class="button">Randevu Al</a>
-    </div>
+<h1>Tarzın <span class="gold">Senin İmzan</span></h1>
+
+<p>
+Modern saç kesimi, profesyonel sakal bakımı ve sana özel
+bir deneyim. Yeni tarzını birlikte keşfedelim.
+</p>
+
+<div class="buttons">
+<a class="btn btn-primary" href="#iletisim">Randevu Al</a>
+<a class="btn btn-secondary" href="#hizmetler">Hizmetlerimizi Gör</a>
+</div>
+
+</div>
 </section>
 
-<section id="hizmetler">
+<section class="services" id="hizmetler">
 
-    <h2 class="title">Hizmetlerimiz</h2>
-    <p class="subtitle">Profesyonel bakım ve modern tarz.</p>
+<div class="container">
 
-    <div class="services">
+<div class="section-title">
+<h2>Hizmetlerimiz</h2>
+<p>Profesyonel bakım ve modern stil bir arada.</p>
+</div>
 
-        <div class="card">
-            <h3>✂ Saç Kesimi</h3>
-            <p>Yüz şekline ve tarzına uygun modern saç kesimi.</p>
-        </div>
+<div class="cards">
 
-        <div class="card">
-            <h3>🧔 Sakal Bakımı</h3>
-            <p>Profesyonel sakal kesimi ve şekillendirme.</p>
-        </div>
+<div class="card">
+<div class="icon">✂️</div>
+<h3>Saç Kesimi</h3>
+<p>Yüz şekline ve tarzına uygun modern ve profesyonel saç kesimi.</p>
+</div>
 
-        <div class="card">
-            <h3>💈 Saç + Sakal</h3>
-            <p>Komple bakım ile yeni ve modern bir görünüm.</p>
-        </div>
+<div class="card">
+<div class="icon">🧔</div>
+<h3>Sakal Bakımı</h3>
+<p>Profesyonel şekillendirme ile daha bakımlı ve güçlü bir görünüm.</p>
+</div>
 
-    </div>
+<div class="card">
+<div class="icon">✨</div>
+<h3>Saç + Sakal</h3>
+<p>Komple bakım paketi ile tarzını baştan aşağı yenile.</p>
+</div>
 
-</section>
-
-<section class="prices" id="fiyatlar">
-
-    <h2 class="title">Fiyatlarımız</h2>
-    <p class="subtitle">Örnek fiyat listesi</p>
-
-    <div class="price-list">
-
-        <div class="price-item">
-            <span>Saç Kesimi</span>
-            <span class="price">250 TL</span>
-        </div>
-
-        <div class="price-item">
-            <span>Sakal Kesimi</span>
-            <span class="price">150 TL</span>
-        </div>
-
-        <div class="price-item">
-            <span>Saç + Sakal</span>
-            <span class="price">350 TL</span>
-        </div>
-
-        <div class="price-item">
-            <span>Çocuk Saç Kesimi</span>
-            <span class="price">200 TL</span>
-        </div>
-
-    </div>
+</div>
+</div>
 
 </section>
 
-<section id="galeri">
+<section id="fiyatlar">
 
-    <h2 class="title">Galerimiz</h2>
-    <p class="subtitle">Yaptığımız çalışmalardan örnekler</p>
+<div class="container">
 
-    <div class="gallery">
+<div class="section-title">
+<h2>Hizmet Paketleri</h2>
+<p>İhtiyacına uygun paketi seç.</p>
+</div>
 
-        <div class="gallery-item">📸 Fotoğraf 1</div>
-        <div class="gallery-item">📸 Fotoğraf 2</div>
-        <div class="gallery-item">📸 Fotoğraf 3</div>
+<div class="pricing-grid">
 
-    </div>
+<div class="price-card">
+<h3>Standart</h3>
+<div class="price">₺---</div>
+
+<ul>
+<li>✓ Profesyonel Saç Kesimi</li>
+<li>✓ Saç Şekillendirme</li>
+<li>✓ Bakım Önerisi</li>
+</ul>
+
+<a href="#iletisim" class="btn btn-secondary">Randevu Al</a>
+</div>
+
+<div class="price-card featured">
+<h3>Premium ⭐</h3>
+<div class="price">₺---</div>
+
+<ul>
+<li>✓ Saç Kesimi</li>
+<li>✓ Sakal Bakımı</li>
+<li>✓ Profesyonel Şekillendirme</li>
+<li>✓ Premium Bakım</li>
+</ul>
+
+<a href="#iletisim" class="btn btn-primary">En Çok Tercih Edilen</a>
+</div>
+
+<div class="price-card">
+<h3>VIP</h3>
+<div class="price">₺---</div>
+
+<ul>
+<li>✓ Komple Saç Bakımı</li>
+<li>✓ Premium Sakal Bakımı</li>
+<li>✓ Detaylı Şekillendirme</li>
+</ul>
+
+<a href="#iletisim" class="btn btn-secondary">Randevu Al</a>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<section class="about" id="hakkimizda">
+
+<div class="container">
+
+<div class="about-box">
+
+<div class="about-visual">💈</div>
+
+<div class="about-text">
+<h2>Tarzına <span class="gold">Değer Veriyoruz</span></h2>
+
+<p>
+Yıldız Berber olarak sadece saç kesmiyoruz. Her müşterimizin
+tarzına uygun, modern ve kaliteli bir deneyim sunuyoruz.
+</p>
+
+<p>
+Profesyonel hizmet anlayışımız ve detaylara verdiğimiz önemle
+kendini daha iyi hissetmeni sağlıyoruz.
+</p>
+
+</div>
+
+</div>
+</div>
 
 </section>
 
 <section class="contact" id="iletisim">
 
-    <h2 class="title">Bize Ulaşın</h2>
+<div class="container">
 
-    <p>📍 İstanbul, Türkiye</p>
-    <p>📞 0555 555 55 55</p>
-    <p>🕒 Her gün: 09:00 - 21:00</p>
+<div class="contact-box">
 
-    <!-- BURAYA GERÇEK NUMARA EKLENECEK -->
-    <a class="button whatsapp"
-       href="https://wa.me/905555555555"
-       target="_blank">
-       WhatsApp'tan Randevu Al 🟢
-    </a>
+<h2>Randevu <span class="gold">Al</span></h2>
+
+<p>
+Yeni tarzına bir adım daha yaklaş. Bizimle iletişime geç!
+</p>
+
+<div class="buttons">
+<a href="tel:+905555555555" class="btn btn-primary">📞 Telefon</a>
+<a href="#" class="btn btn-secondary">📍 Konum</a>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
+</main>
+
 <footer>
-    © 2026 Yıldız Berber — Tüm hakları saklıdır.
+<p>© 2026 Yıldız Berber • Tüm Hakları Saklıdır</p>
 </footer>
 
 </body>
